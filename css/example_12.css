@@ -18,7 +18,6 @@ img {
 }
 /* 숨김컨텐츠 */
 .readable-hidden {
-  background: pink;
   position: absolute;
   width: 1px;
   height: 1px;
@@ -28,9 +27,38 @@ img {
 }
 
 body {
+    background: url("../images/road.png") no-repeat 0 0 
+    / cover fixed;
 
 }
-
+/* 헤더공통 */
+.header{
+    background-color: #fff;
+    z-index: 10;
+}
+/* 광고공통 */
+.ad{
+    color: #fff;
+    font-size: 3em;
+    /* display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 1em; */
+}
+.ad-content{
+    position: sticky;
+    top: 100px;
+    text-align: right;
+}
+/* 메인공통 */
+.main{
+    background-color: #fff;
+}
+/* 푸터공통 */
+.footer{
+    background: #181818;
+    color: #fff;
+}
 /* 모바일디바이스 */
 @media screen and (max-width: 999px) {
   /* 모바일로고 */
@@ -40,13 +68,11 @@ body {
   }
   /* 모바일 메뉴 */
   .menu {
-    background: yellow;
     display: flex;
     justify-content: space-around;
   }
   .menu a{
       display: block;
-      background: pink;
       padding: 1em;
       text-transform: uppercase;
   }
@@ -58,10 +84,9 @@ body {
     .header{
         display: grid;
         grid-template-areas: "logo  menu";
-        background: lime;
         align-items: center;
         padding: 1em 2em;
-        position: fixed;
+        position: sticky;
         width: 100%;
         top: 0;
         left: 0;
@@ -70,13 +95,11 @@ body {
     .logo{
         grid-area: logo;
         width: 20%;
-        background-color: yellow;
     }
     /* 데스크탑메뉴 */
     .menu{
         grid-area: menu;
         display: flex;
-        background: pink;
     }
 .menu a{
     display: block;
@@ -90,15 +113,12 @@ body {
     content: "";
 }
 .ad{
-    background:orange;
     height: 50vh;
 }
 .main{
-    background: silver;
     height: 50vh;
 }
 .footer{
-    background: blue;
     height: 50vh;
 }
 }
